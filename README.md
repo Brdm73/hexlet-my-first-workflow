@@ -6,3 +6,7 @@
 ### CodeClimate
 <a href="https://codeclimate.com/github/Brdm73/hexlet-my-first-workflow/maintainability"><img src="https://api.codeclimate.com/v1/badges/eb9eb9b853127994d518/maintainability" /></a>
 
+### Workflow status badge
+https://github.com/Brdm73/hexlet-my-first-workflow/actions/workflows/for_action_tests.yml/badge.svg
+
+
