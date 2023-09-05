@@ -1,17 +1,19 @@
 # file: .github/workflows/for_action_tests.yml
-name: for_action_tests
-# on – определяет события, которые запускают воркфлоу
+name: Run Makefile Command
 on: push
+
 jobs:
-  # build – произвольно выбранное имя задания
-  # их может быть больше одного
   build:
-    # операционная система для работы воркфлоу
     runs-on: ubuntu-latest
-    steps: # список шагов, которые надо выполнить
-      # экшен — выполняет какую-то задачу
-      # checkout — клонирует репозиторий
-      - uses: actions/checkout@v3
-      # run – произвольная bash-команда
-      # ls -la выведет содержимое текущего репозитория
-      - run: make say_hello
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x  # Здесь замените на вашу версию Python
+
+      - name: Run Makefile Command
+        run: make say_hello
